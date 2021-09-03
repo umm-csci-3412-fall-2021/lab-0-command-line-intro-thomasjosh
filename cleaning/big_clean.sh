@@ -9,7 +9,7 @@ TMPDIR=$(mktemp -d) || exit 1
 #Unzips and copies over the files of the inputed directory into the temp directory
 tar -zxvf "$1" -C "$TMPDIR"
 
-#Finds and deletes and file containing the line 'DELETE ME!'
+#Finds and deletes any file containing the line 'DELETE ME!'
 grep -rl "DELETE ME!" "$TMPDIR" | xargs rm -f
 
 cd "$TMPDIR" || exit
