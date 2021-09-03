@@ -9,4 +9,4 @@ grep -rl "DELETE ME!" $TMPDIR | xargs rm -f
 
 cd $TMPDIR
 base='basename $1'
-tar -czvf /$here/cleaned_$1 little_dir
+tar -czvf /$here/cleaned_$1 "$(basename $1 .tgz)"
