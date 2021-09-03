@@ -6,7 +6,7 @@ here=$(pwd)
 #Makes a temp directory and keeps its location
 TMPDIR=$(mktemp -d) || exit 1
 
-#Copies over the files of the inputed directory into the temp directory
+#Unzips and copies over the files of the inputed directory into the temp directory
 tar -zxvf "$1" -C "$TMPDIR"
 
 #Finds and deletes and file containing the line 'DELETE ME!'
